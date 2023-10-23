@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: valaxy-rtp
-  namespace: valaxy
+  name: hkdevops-rtp
+  namespace: hkdevops
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app:  valaxy-rtp
+      app:  hkdevops-rtp
   template:
     metadata:
       labels:
-        app:  valaxy-rtp
+        app:  hkdevops-rtp
     spec:
       imagePullSecrets:
       - name: jfrogcred
       containers:
-      - name:  valaxy-rtp
-        image: valaxy01.jfrog.io/valaxy-docker/ttrend:2.1.2
+      - name:  hkdevops-rtp
+        image: https://hethkar.jfrog.io/artifactory/devopsproject01-docker/ttrend:2.1.2
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
