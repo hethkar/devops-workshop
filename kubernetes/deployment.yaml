@@ -17,7 +17,7 @@ spec:
       - name: jfrogcred
       containers:
       - name:  hkdevops-rtp
-        image: https://hethkar.jfrog.io/artifactory/devopsproject01-docker/ttrend:2.1.2
+        image: hethkar.jfrog.io/devopsproject01-docker/ttrend:2.1.2
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
